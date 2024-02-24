@@ -8,7 +8,10 @@ class ChineseToJyutpingMap : HashMap<String, JyutpingModel>() {
 
     companion object {
         private val map: HashMap<Char, JyutpingModel> = hashMapOf(
-            '吖' to JyutpingModel("aa1", listOf("aa2", "aa6"))
+            '吖' to JyutpingModel("aa1", listOf()),
+            '啊' to JyutpingModel(
+                "aa1", listOf("aa2", "aa6")
+            )
         )
 
         fun convertToJyutping(character: Char?): String? {
