@@ -6,5 +6,5 @@ package data
  */
 data class JyutpingModel(
     val text: String,
-    val alternateText: String
+    val alternateText: List<String>
 )
