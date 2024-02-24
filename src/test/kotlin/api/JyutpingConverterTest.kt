@@ -7,10 +7,15 @@ class JyutpingConverterTest {
 
     @Test
     fun test吖() {
-        // Assuming JyutpingConverter has a function for conversion
         val jyutpingConverter = JyutpingConverter()
 
-        assertEquals(expected = "aa1", actual = jyutpingConverter.translate('吖'))
-        assertEquals(expected = listOf("aa2", "aa6"), actual = jyutpingConverter.getAlternateTranslations('吖'))
+        assertEquals(
+            expected = "aa1",
+            actual = jyutpingConverter.translate('吖')
+        )
+        assertEquals(
+            expected = listOf("aa2", "aa6"),
+            actual = jyutpingConverter.getAlternateTranslations('吖')
+        )
     }
 }
