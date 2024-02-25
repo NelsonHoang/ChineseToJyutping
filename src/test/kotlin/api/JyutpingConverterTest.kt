@@ -41,4 +41,67 @@ class JyutpingConverterTest {
         )
     }
 
+    @Test
+    fun test啞and哑() {
+        assertEquals(
+            expected = listOf("aa2", "ak1"),
+            actual = JyutpingConverter().translate('啞')
+        )
+        assertEquals(
+            expected = listOf("aa2", "ak1"),
+            actual = JyutpingConverter().translate('哑')
+        )
+    }
+
+    @Test
+    fun test亞and亚() {
+        assertEquals(
+            expected = listOf("aa3"),
+            actual = JyutpingConverter().translate('亞')
+        )
+        assertEquals(
+            expected = listOf("aa3"),
+            actual = JyutpingConverter().translate('亚')
+        )
+    }
+
+    @Test
+    fun test呀() {
+        assertEquals(
+            expected = listOf("aa3", "aa4", "aa5", "aa1"),
+            actual = JyutpingConverter().translate('呀')
+        )
+    }
+
+    @Test
+    fun test阿() {
+        assertEquals(
+            expected = listOf("aa3", "o1"),
+            actual = JyutpingConverter().translate('阿')
+        )
+    }
+
+    @Test
+    fun test哎() {
+        assertEquals(
+            expected = listOf("aai1"),
+            actual = JyutpingConverter().translate('哎')
+        )
+    }
+
+    @Test
+    fun test挨() {
+        assertEquals(
+            expected = listOf("aai1"),
+            actual = JyutpingConverter().translate('挨')
+        )
+    }
+
+    @Test
+    fun test唉() {
+        assertEquals(
+            expected = listOf("aai1"),
+            actual = JyutpingConverter().translate('唉')
+        )
+    }
 }
