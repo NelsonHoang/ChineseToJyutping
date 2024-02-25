@@ -8,18 +8,14 @@ class ChineseToJyutpingMap : HashMap<String, JyutpingModel>() {
 
     companion object {
         private val map: HashMap<Char, JyutpingModel> = hashMapOf(
-            '吖' to JyutpingModel("aa1", listOf()),
+            '吖' to JyutpingModel(listOf("aa1")),
             '啊' to JyutpingModel(
-                "aa1", listOf("aa2", "aa6")
+                listOf("aa1", "aa2", "aa6")
             )
         )
 
-        fun convertToJyutping(character: Char?): String? {
-            return map[character]?.text
-        }
-
-        fun getAlternativeJyutping(character: Char?): List<String>? {
-            return map[character]?.alternateText
+        fun convertToJyutping(character: Char?): List<String>? {
+            return map[character]?.texts
         }
     }
 }
