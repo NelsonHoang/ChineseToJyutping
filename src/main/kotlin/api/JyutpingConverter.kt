@@ -8,7 +8,7 @@ class JyutpingConverter {
     /**
      * @return A [List] of Jyutping translations of a Chinese character
      * */
-    fun translate(character: Char): List<String>? {
+    fun translate(character: String): List<String>? {
         return ChineseToJyutpingMap.convertToJyutping(character)
     }
 }
