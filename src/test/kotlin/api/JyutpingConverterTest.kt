@@ -1,11 +1,10 @@
-@file:Suppress("NonAsciiCharacters")
-
 package api
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-@Suppress("TestFunctionName")
+
+@Suppress("NonAsciiCharacters", "TestFunctionName")
 class JyutpingConverterTest {
 
     @Test
@@ -112,6 +111,14 @@ class JyutpingConverterTest {
     fun test隘() {
         assertEquals(
             expected = listOf("aai3", "ai3"),
+            actual = JyutpingConverter().translate('隘')
+        )
+    }
+
+    @Test
+    fun test嗌() {
+        assertEquals(
+            expected = listOf("aai3", "jik1"),
             actual = JyutpingConverter().translate('隘')
         )
     }

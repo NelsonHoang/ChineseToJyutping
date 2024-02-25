@@ -28,6 +28,7 @@ class ChineseToJyutpingMap : HashMap<String, JyutpingModel>() {
             '挨' to JyutpingModel(listOf("aai1")),
             '唉' to JyutpingModel(listOf("aai1")),
             '隘' to JyutpingModel(listOf("aai3", "ai3")),
+            '嗌' to JyutpingModel(listOf("aai3", "jik1")),
         )
 
         fun convertToJyutping(character: Char?): List<String>? {
